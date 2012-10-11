@@ -330,6 +330,7 @@ final class PHP_Beautifier_Filter_Default extends PHP_Beautifier_Filter
     function t_doc_comment($sTag) 
     {
         $this->oBeaut->removeWhiteSpace();
+	$this->oBeaut->addNewLine();
         $this->oBeaut->addNewLineIndent();
         // process doc
         preg_match("/(\/\*\*[^\r\n]*)(.*?)(\*\/)/sm", $sTag, $aMatch);
